@@ -19,7 +19,7 @@ messagebox.showinfo("Pomodore Timer Started!", "The time is now " + time_now.str
 
 hosts_path = r'C:\Windows\System32\drivers\etc'
 redirect = "127.0.0.1"
-website_list = ["crunchyroll.com", "www.crunchyroll.com", "www.netflix.com", "netflix.com"]
+website_list = ["crunchyroll.com", "www.crunchyroll.com", "www.netflix.com", "netflix.com", "youtube.com", "www.youtube.com"]
 
 total_pomodoros = 0
 
@@ -53,7 +53,7 @@ while True:
 
     elif time_future <= time_now <= time_done:
         print('You are in your break')
-        messagebox.showinfo("Break Started!", "\nIt is now "+ time_now)
+        messagebox.showinfo("Break Started!", "\nIt is now "+ time_now.strftime("%H:  %M"))
         remove_website(hosts_path)
 
     else:
